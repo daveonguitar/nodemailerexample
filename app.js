@@ -14,8 +14,8 @@ let transporter = nodemailer.createTransport({
 
 //Step 2 - setting up the email message
 let mailOptions = {
-  from: "bensonda81@gmail.com",
-  to: "duh_unabomb@hotmail.com",
+  from: process.env.FROM,
+  to: process.env.TO,
   subject: "Is this thing on?",
   text: "Is this thing on?",
 };
