@@ -18,6 +18,13 @@ let mailOptions = {
   to: process.env.TO,
   subject: "Is this thing on?",
   text: "Is this thing on?",
+  // plain text is ignored if using html
+  html: "<h1>Is this thing on?</h1>",
+  // file on disk as an attachment
+  attachments: {
+    filename: "text.txt",
+    path: "./text.txt",
+  },
 };
 
 //Step 3 - sending the message
